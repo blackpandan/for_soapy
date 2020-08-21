@@ -24,24 +24,24 @@ class polls:
                 print("\n")
                 print(polls.question)
                 for choice in polls.choices:
-                    choices2 = choice + "," + " "
+                    choices2 = f"{choice}, "
                     print(choices2)    
                 choosed = input("\nInput Choice: ")
-                if choosed == "blue" or choosed == "Blue" or choosed == "BLUE":
+                if choosed.lower == "blue":
                     total_poll += 1
                     blue += 1
-                elif choosed == "red" or choosed == "Red" or choosed == "RED":
+                elif choosed.lower == "red":
                     total_poll += 1
                     red += 1
-                elif choosed == "green" or choosed == "Green" or choosed == "GREEN":
+                elif choosed.lower == "green":
                     total_poll += 1
                     green += 1
                 else:
                     print("wrong input")
                 print("\n")
-                print("blue: " + str(blue) + " votes")
-                print("red: " + str(red) + " votes")
-                print("green: " + str(green) + " votes")
+                print(f"blue: {blue}votes✓")
+                print("red: {red} votes✓")
+                print("green: {green}votes✓")
                 print("\n")
                 sleep(5)
                 clear()
